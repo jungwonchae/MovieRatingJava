@@ -13,7 +13,8 @@ It Also uses HashMap to prevent same movie getting added.
 By using HashMap, program's adding, deleting, and searching became faster than using ArrayList.
 
 ## 3. UML diagram of classes and interfaces
-
+<img src="https://github.com/jungwonchae/MovieRatingJava/blob/main/MovieRatingProject/uml.jpeg"><br>
+<hr>
 
 ## 4. github link
 https://github.com/jungwonchae/MovieRatingJava.git
