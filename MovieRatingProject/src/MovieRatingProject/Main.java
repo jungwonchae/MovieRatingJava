@@ -1,9 +1,9 @@
+//main
+
 package MovieRatingProject;
 
-import java.io.FileNotFoundException;
-import java.util.*;
-import java.io.File;
-import javax.swing.SwingUtilities;
+import javax.swing.*;
+import java.util.Scanner;
 
 public class Main {
 
@@ -11,15 +11,15 @@ public class Main {
 		Scanner keyboard = new Scanner(System.in);
 		CRUD manager = new CRUD();
 		SwingUtilities.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                MovieFrame movieFrame = new MovieFrame();
-                movieFrame.setVisible(true);
-            }
-        });
+			@Override
+			public void run() {
+				MovieFrame movieFrame = new MovieFrame();
+				movieFrame.setVisible(true);
+			}
+		});
 		System.out.println("Enter \"print\" or \"rate\" or \"sort name\" or \"sort rate\" or \"find genre\" or \"add\" or \"delete\" or \"save\" or \"exit\"");
 		manager.loadText();
-		while(true) {	
+		while(true) {
 			System.out.print("\nEnter action : ");
 			String input = keyboard.nextLine();
 			input = input.replace(" ", "");
@@ -43,10 +43,12 @@ public class Main {
 				manager.findGenre();
 			}
 			else if (input.equalsIgnoreCase("delete")) {
-				manager.delete();
+				manager.deleteMovie();
 			}
 			else if (input.equalsIgnoreCase("add")) {
 				manager.addMovie();
+			}else if(input.equalsIgnoreCase("save")){
+				manager.save();
 			}
 			else System.out.println("::not a vaild function. try again::");
 		}
