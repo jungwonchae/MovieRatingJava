@@ -1,6 +1,4 @@
 //MovieFrame
-
-//MovieFrame
 package MovieRatingProject;
 
 import javax.swing.*;
